@@ -38,6 +38,11 @@ module.exports = function(sequelize, DataTypes) {
     features: {
       type: DataTypes.STRING(50),
       allowNull: true
+    },
+    recent: {
+      type: DataTypes.TINYINT,
+      defaultValue: true,
+      allowNull: false
     }
   }, {
     sequelize,

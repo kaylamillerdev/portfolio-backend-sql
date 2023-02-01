@@ -17,19 +17,16 @@ router.get('/projects', function(req, res, next){
   });
 });
 
-/* router.get('/recentProjects', function(req, res, next) {
-  models.projects.findOne({id:0}).then(projectsFound => {
+router.get('/about', function(req, res, next){
+  models.aboutMe.findAll({}).then(info => {
+    res.json(info);
+  });
+});
+
+router.get('/recentProjects', function(req, res, next) {
+  models.projects.findOne({recent:"1"}).then(projectsFound => {
     console.log(projectsFound);
     res.json(projectsFound);
-  })
-}) */
+  });
+});
 module.exports = router;
-
-
-
-
-function myFunction(p1, p2) {
-  return p1 * p2;
-}
-
-myFunction(2, 4);
