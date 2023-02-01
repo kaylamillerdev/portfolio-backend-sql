@@ -15,10 +15,10 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
+    "username": "admin",
+    "password": "admin",
+    "database": "portfoliodb",
+    "host": "34.162.0.3",
     "dialect": "mysql"
   }
 }
